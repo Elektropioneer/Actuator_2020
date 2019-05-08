@@ -1,0 +1,2005 @@
+EESchema Schematic File Version 4
+LIBS:Actuator_2020-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Actuator board"
+Date "2019-04-11"
+Rev "1.0"
+Comp "Electropioneer"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Actuator_2020-rescue:Arduino_Nano_v3.x-MCU_Module A1
+U 1 1 5CB0CEA6
+P 4400 1750
+F 0 "A1" H 4050 800 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 4000 700 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4550 800 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4400 750 50  0001 C CNN
+	1    4400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:+5V-power #PWR0101
+U 1 1 5CB0E589
+P 4600 700
+F 0 "#PWR0101" H 4600 550 50  0001 C CNN
+F 1 "+5V" H 4615 869 50  0000 C CNN
+F 2 "" H 4600 700 50  0001 C CNN
+F 3 "" H 4600 700 50  0001 C CNN
+	1    4600 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0102
+U 1 1 5CB0EEEF
+P 4400 2800
+F 0 "#PWR0102" H 4400 2550 50  0001 C CNN
+F 1 "GND" V 4400 2600 50  0000 C CNN
+F 2 "" H 4400 2800 50  0001 C CNN
+F 3 "" H 4400 2800 50  0001 C CNN
+	1    4400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0103
+U 1 1 5CB0F3DF
+P 4500 2800
+F 0 "#PWR0103" H 4500 2550 50  0001 C CNN
+F 1 "GND" V 4500 2600 50  0000 C CNN
+F 2 "" H 4500 2800 50  0001 C CNN
+F 3 "" H 4500 2800 50  0001 C CNN
+	1    4500 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2750 4400 2800
+Wire Wire Line
+	4500 2750 4500 2800
+Wire Wire Line
+	4600 700  4600 750 
+NoConn ~ 4500 750 
+NoConn ~ 4300 750 
+NoConn ~ 4900 1150
+NoConn ~ 4900 1250
+NoConn ~ 4900 1550
+Text GLabel 3850 1150 0    50   Input ~ 0
+SERIAL_RX
+Text GLabel 3850 1250 0    50   Input ~ 0
+SERIAL_TX
+Wire Wire Line
+	3850 1150 3900 1150
+Wire Wire Line
+	3850 1250 3900 1250
+Text GLabel 3850 2050 0    50   Input ~ 0
+DC1_1
+Text GLabel 3850 2150 0    50   Input ~ 0
+DC1_2
+Text GLabel 3850 1650 0    50   Input ~ 0
+DC2_1
+Text GLabel 3850 1750 0    50   Input ~ 0
+DC2_2
+Wire Wire Line
+	3850 1650 3900 1650
+Wire Wire Line
+	3850 1750 3900 1750
+Wire Wire Line
+	3850 2050 3900 2050
+Wire Wire Line
+	3850 2150 3900 2150
+Text GLabel 4950 1750 2    50   Input ~ 0
+RELAY1
+Text GLabel 4950 1850 2    50   Input ~ 0
+RELAY2
+Wire Wire Line
+	4900 1750 4950 1750
+Wire Wire Line
+	4900 1850 4950 1850
+$Comp
+L Actuator_2020-rescue:Pololu_Breakout_A4988-Driver_Motor A2
+U 1 1 5CB10883
+P 10000 1750
+F 0 "A2" H 9800 2500 50  0000 C CNN
+F 1 "Stepper1" H 9700 2400 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 10275 1000 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 10100 1450 50  0001 C CNN
+	1    10000 1750
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 1850 0    50   Input ~ 0
+STEPPER1_DIR
+Text GLabel 3850 1950 0    50   Input ~ 0
+STEPPER1_STEP
+Text GLabel 3850 2250 0    50   Input ~ 0
+STEPPER2_DIR
+Text GLabel 3850 2350 0    50   Input ~ 0
+STEPPER2_STEP
+Wire Wire Line
+	3850 1850 3900 1850
+Wire Wire Line
+	3850 1950 3900 1950
+Wire Wire Line
+	3850 2250 3900 2250
+Wire Wire Line
+	3850 2350 3900 2350
+Text GLabel 4950 2250 2    50   Input ~ 0
+SCL
+Text GLabel 4950 2150 2    50   Input ~ 0
+SDA
+Wire Wire Line
+	4900 2150 4950 2150
+Wire Wire Line
+	4900 2250 4950 2250
+Text GLabel 4950 2450 2    50   Input ~ 0
+BAT_MEASUREMENT
+Wire Wire Line
+	4900 2450 4950 2450
+Text GLabel 3850 1350 0    50   Input ~ 0
+MOSFET1
+Text GLabel 3850 1450 0    50   Input ~ 0
+MOSFET2
+Text GLabel 3850 1550 0    50   Input ~ 0
+MOSFET3
+Text GLabel 3850 2450 0    50   Input ~ 0
+MOSFET4
+Wire Wire Line
+	3850 1350 3900 1350
+Wire Wire Line
+	3850 1450 3900 1450
+Wire Wire Line
+	3850 1550 3900 1550
+Wire Wire Line
+	4900 1950 4950 1950
+Wire Wire Line
+	4900 2050 4950 2050
+$Comp
+L Actuator_2020-rescue:Conn_01x04-Connector_Generic J2
+U 1 1 5CB146E0
+P 1150 1100
+F 0 "J2" H 1150 1300 50  0000 C CNN
+F 1 "SERIAL_CONNECTOR" V 1250 1050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1150 1100 50  0001 C CNN
+F 3 "~" H 1150 1100 50  0001 C CNN
+	1    1150 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:+5V-power #PWR0104
+U 1 1 5CB157F5
+P 1400 850
+F 0 "#PWR0104" H 1400 700 50  0001 C CNN
+F 1 "+5V" H 1415 1019 50  0000 C CNN
+F 2 "" H 1400 850 50  0001 C CNN
+F 3 "" H 1400 850 50  0001 C CNN
+	1    1400 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0105
+U 1 1 5CB160C8
+P 1400 1250
+F 0 "#PWR0105" H 1400 1000 50  0001 C CNN
+F 1 "GND" H 1400 1100 50  0000 C CNN
+F 2 "" H 1400 1250 50  0001 C CNN
+F 3 "" H 1400 1250 50  0001 C CNN
+	1    1400 1250
+	1    0    0    -1  
+$EndComp
+Text GLabel 1400 1000 2    50   Input ~ 0
+SERIAL_RX
+Text GLabel 1400 1100 2    50   Input ~ 0
+SERIAL_TX
+Wire Wire Line
+	1350 900  1400 900 
+Wire Wire Line
+	1400 900  1400 850 
+Wire Wire Line
+	1350 1000 1400 1000
+Wire Wire Line
+	1350 1100 1400 1100
+Wire Wire Line
+	1350 1200 1400 1200
+Wire Wire Line
+	1400 1200 1400 1250
+$Comp
+L Actuator_2020-rescue:Conn_01x04-Connector_Generic J5
+U 1 1 5CB17F51
+P 2400 1100
+F 0 "J5" H 2400 1300 50  0000 C CNN
+F 1 "I2C_CONNECTOR" V 2500 1050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2400 1100 50  0001 C CNN
+F 3 "~" H 2400 1100 50  0001 C CNN
+	1    2400 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:+5V-power #PWR0106
+U 1 1 5CB18891
+P 2650 850
+F 0 "#PWR0106" H 2650 700 50  0001 C CNN
+F 1 "+5V" H 2665 1019 50  0000 C CNN
+F 2 "" H 2650 850 50  0001 C CNN
+F 3 "" H 2650 850 50  0001 C CNN
+	1    2650 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0107
+U 1 1 5CB18BF4
+P 2650 1250
+F 0 "#PWR0107" H 2650 1000 50  0001 C CNN
+F 1 "GND" H 2650 1100 50  0000 C CNN
+F 2 "" H 2650 1250 50  0001 C CNN
+F 3 "" H 2650 1250 50  0001 C CNN
+	1    2650 1250
+	1    0    0    -1  
+$EndComp
+Text GLabel 2650 1000 2    50   Input ~ 0
+SDA
+Text GLabel 2650 1100 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	2600 1000 2650 1000
+Wire Wire Line
+	2600 900  2650 900 
+Wire Wire Line
+	2650 900  2650 850 
+Wire Wire Line
+	2600 1100 2650 1100
+Wire Wire Line
+	2600 1200 2650 1200
+Wire Wire Line
+	2650 1200 2650 1250
+Wire Wire Line
+	9600 1450 9550 1450
+Wire Wire Line
+	9550 1450 9550 1350
+Wire Wire Line
+	9550 1350 9600 1350
+NoConn ~ 9600 1650
+NoConn ~ 9600 2050
+NoConn ~ 9600 2150
+NoConn ~ 9600 2250
+$Comp
+L Actuator_2020-rescue:+5V-power #PWR0108
+U 1 1 5CB1EB17
+P 10000 1000
+F 0 "#PWR0108" H 10000 850 50  0001 C CNN
+F 1 "+5V" H 10015 1169 50  0000 C CNN
+F 2 "" H 10000 1000 50  0001 C CNN
+F 3 "" H 10000 1000 50  0001 C CNN
+	1    10000 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1000 10000 1050
+$Comp
+L Actuator_2020-rescue:CP-Device C4
+U 1 1 5CB20236
+P 10550 1000
+F 0 "C4" H 10666 1044 50  0000 L CNN
+F 1 "100uF/16V" H 10666 957 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.4" H 10588 850 50  0001 C CNN
+F 3 "~" H 10550 1000 50  0001 C CNN
+	1    10550 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 1050 10200 800 
+Wire Wire Line
+	10200 800  10550 800 
+Wire Wire Line
+	10550 800  10550 750 
+Wire Wire Line
+	10550 800  10550 850 
+Connection ~ 10550 800 
+Wire Wire Line
+	10550 1150 10550 1200
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0109
+U 1 1 5CB22F8D
+P 10000 2600
+F 0 "#PWR0109" H 10000 2350 50  0001 C CNN
+F 1 "GND" H 10000 2450 50  0000 C CNN
+F 2 "" H 10000 2600 50  0001 C CNN
+F 3 "" H 10000 2600 50  0001 C CNN
+	1    10000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0110
+U 1 1 5CB23562
+P 10200 2600
+F 0 "#PWR0110" H 10200 2350 50  0001 C CNN
+F 1 "GND" H 10200 2450 50  0000 C CNN
+F 2 "" H 10200 2600 50  0001 C CNN
+F 3 "" H 10200 2600 50  0001 C CNN
+	1    10200 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2550 10000 2600
+Wire Wire Line
+	10200 2550 10200 2600
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0111
+U 1 1 5CB24DB1
+P 10550 1200
+F 0 "#PWR0111" H 10550 950 50  0001 C CNN
+F 1 "GND" H 10550 1050 50  0000 C CNN
+F 2 "" H 10550 1200 50  0001 C CNN
+F 3 "" H 10550 1200 50  0001 C CNN
+	1    10550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0112
+U 1 1 5CB2657A
+P 10550 750
+F 0 "#PWR0112" H 10550 600 50  0001 C CNN
+F 1 "+12V" H 10565 919 50  0000 C CNN
+F 2 "" H 10550 750 50  0001 C CNN
+F 3 "" H 10550 750 50  0001 C CNN
+	1    10550 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:Screw_Terminal_01x04-Connector J11
+U 1 1 5CB2A0E4
+P 10750 1750
+F 0 "J11" H 10750 1950 50  0000 L CNN
+F 1 "STEPPER1_CONN" V 10900 1400 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal" H 10750 1750 50  0001 C CNN
+F 3 "~" H 10750 1750 50  0001 C CNN
+	1    10750 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 1650 10550 1650
+Wire Wire Line
+	10500 1750 10550 1750
+Wire Wire Line
+	10500 1850 10550 1850
+Wire Wire Line
+	10500 1950 10550 1950
+$Comp
+L Actuator_2020-rescue:Pololu_Breakout_A4988-Driver_Motor A3
+U 1 1 5CB2FF1E
+P 10000 3950
+F 0 "A3" H 9800 4700 50  0000 C CNN
+F 1 "Stepper2" H 9700 4600 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 10275 3200 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 10100 3650 50  0001 C CNN
+	1    10000 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 3650 9550 3650
+Wire Wire Line
+	9550 3650 9550 3550
+Wire Wire Line
+	9550 3550 9600 3550
+NoConn ~ 9600 3850
+NoConn ~ 9600 4250
+NoConn ~ 9600 4350
+NoConn ~ 9600 4450
+$Comp
+L Actuator_2020-rescue:+5V-power #PWR0113
+U 1 1 5CB2FF2F
+P 10000 3200
+F 0 "#PWR0113" H 10000 3050 50  0001 C CNN
+F 1 "+5V" H 10015 3369 50  0000 C CNN
+F 2 "" H 10000 3200 50  0001 C CNN
+F 3 "" H 10000 3200 50  0001 C CNN
+	1    10000 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 3200 10000 3250
+$Comp
+L Actuator_2020-rescue:CP-Device C5
+U 1 1 5CB2FF3A
+P 10550 3200
+F 0 "C5" H 10666 3244 50  0000 L CNN
+F 1 "100uF/16V" H 10666 3157 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.4" H 10588 3050 50  0001 C CNN
+F 3 "~" H 10550 3200 50  0001 C CNN
+	1    10550 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 3250 10200 3000
+Wire Wire Line
+	10200 3000 10550 3000
+Wire Wire Line
+	10550 3000 10550 2950
+Wire Wire Line
+	10550 3000 10550 3050
+Connection ~ 10550 3000
+Wire Wire Line
+	10550 3350 10550 3400
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0114
+U 1 1 5CB2FF4A
+P 10000 4800
+F 0 "#PWR0114" H 10000 4550 50  0001 C CNN
+F 1 "GND" H 10000 4650 50  0000 C CNN
+F 2 "" H 10000 4800 50  0001 C CNN
+F 3 "" H 10000 4800 50  0001 C CNN
+	1    10000 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0115
+U 1 1 5CB2FF54
+P 10200 4800
+F 0 "#PWR0115" H 10200 4550 50  0001 C CNN
+F 1 "GND" H 10200 4650 50  0000 C CNN
+F 2 "" H 10200 4800 50  0001 C CNN
+F 3 "" H 10200 4800 50  0001 C CNN
+	1    10200 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 4750 10000 4800
+Wire Wire Line
+	10200 4750 10200 4800
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0116
+U 1 1 5CB2FF60
+P 10550 3400
+F 0 "#PWR0116" H 10550 3150 50  0001 C CNN
+F 1 "GND" H 10550 3250 50  0000 C CNN
+F 2 "" H 10550 3400 50  0001 C CNN
+F 3 "" H 10550 3400 50  0001 C CNN
+	1    10550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0117
+U 1 1 5CB2FF6A
+P 10550 2950
+F 0 "#PWR0117" H 10550 2800 50  0001 C CNN
+F 1 "+12V" H 10565 3119 50  0000 C CNN
+F 2 "" H 10550 2950 50  0001 C CNN
+F 3 "" H 10550 2950 50  0001 C CNN
+	1    10550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:Screw_Terminal_01x04-Connector J12
+U 1 1 5CB2FF74
+P 10750 3950
+F 0 "J12" H 10750 4150 50  0000 L CNN
+F 1 "STEPPER2_CONN" V 10900 3600 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-4-5.08_1x04_P5.08mm_Horizontal" H 10750 3950 50  0001 C CNN
+F 3 "~" H 10750 3950 50  0001 C CNN
+	1    10750 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 3850 10550 3850
+Wire Wire Line
+	10500 3950 10550 3950
+Wire Wire Line
+	10500 4050 10550 4050
+Wire Wire Line
+	10500 4150 10550 4150
+Text GLabel 9550 1850 0    50   Input ~ 0
+STEPPER1_DIR
+Text GLabel 9550 1750 0    50   Input ~ 0
+STEPPER1_STEP
+Text GLabel 9550 4050 0    50   Input ~ 0
+STEPPER2_DIR
+Text GLabel 9550 3950 0    50   Input ~ 0
+STEPPER2_STEP
+Wire Wire Line
+	9550 3950 9600 3950
+Wire Wire Line
+	9600 4050 9550 4050
+Wire Wire Line
+	9550 1750 9600 1750
+Wire Wire Line
+	9550 1850 9600 1850
+$Comp
+L Actuator_2020-rescue:Screw_Terminal_01x02-Connector J1
+U 1 1 5CB3BF63
+P 750 2550
+F 0 "J1" H 750 2300 50  0000 C CNN
+F 1 "INPUT_12V_RAW" V 850 2500 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 750 2550 50  0001 C CNN
+F 3 "~" H 750 2550 50  0001 C CNN
+	1    750  2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:CP-Device C2
+U 1 1 5CB3D8B4
+P 2050 2550
+F 0 "C2" H 2100 2650 50  0000 L CNN
+F 1 "100uF/16V" H 2050 2400 43  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.4" H 2088 2400 50  0001 C CNN
+F 3 "~" H 2050 2550 50  0001 C CNN
+	1    2050 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:C-Device C1
+U 1 1 5CB3F592
+P 1600 2550
+F 0 "C1" H 1650 2650 50  0000 L CNN
+F 1 "100nF/16V" H 1600 2400 43  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1638 2400 50  0001 C CNN
+F 3 "~" H 1600 2550 50  0001 C CNN
+	1    1600 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2350 2050 2400
+Wire Wire Line
+	1600 2400 1600 2350
+Connection ~ 1600 2350
+Wire Wire Line
+	1600 2350 2050 2350
+Wire Wire Line
+	2050 2750 2050 2700
+Wire Wire Line
+	1600 2700 1600 2750
+Connection ~ 1600 2750
+Wire Wire Line
+	1600 2750 2050 2750
+$Comp
+L Actuator_2020-rescue:L7805-Regulator_Linear U1
+U 1 1 5CB49B40
+P 2450 2350
+F 0 "U1" H 2450 2586 50  0000 C CNN
+F 1 "L7805" H 2450 2499 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 2475 2200 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 2450 2300 50  0001 C CNN
+	1    2450 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2750 2450 2750
+Wire Wire Line
+	2450 2750 2450 2650
+Connection ~ 2050 2750
+Wire Wire Line
+	2050 2350 2150 2350
+Connection ~ 2050 2350
+$Comp
+L Actuator_2020-rescue:CP-Device C3
+U 1 1 5CB4F3D2
+P 2850 2550
+F 0 "C3" H 2950 2650 50  0000 L CNN
+F 1 "100uF/16V" H 2500 2400 43  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.4" H 2888 2400 50  0001 C CNN
+F 3 "~" H 2850 2550 50  0001 C CNN
+	1    2850 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2350 2850 2350
+Wire Wire Line
+	2850 2350 2850 2300
+Wire Wire Line
+	2850 2350 2850 2400
+Connection ~ 2850 2350
+Wire Wire Line
+	2450 2750 2850 2750
+Wire Wire Line
+	2850 2750 2850 2700
+Connection ~ 2450 2750
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0118
+U 1 1 5CB56DBA
+P 2450 2800
+F 0 "#PWR0118" H 2450 2550 50  0001 C CNN
+F 1 "GND" H 2450 2650 50  0000 C CNN
+F 2 "" H 2450 2800 50  0001 C CNN
+F 3 "" H 2450 2800 50  0001 C CNN
+	1    2450 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2750 2450 2800
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0119
+U 1 1 5CB59C9D
+P 1600 2300
+F 0 "#PWR0119" H 1600 2150 50  0001 C CNN
+F 1 "+12V" H 1615 2469 50  0000 C CNN
+F 2 "" H 1600 2300 50  0001 C CNN
+F 3 "" H 1600 2300 50  0001 C CNN
+	1    1600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2300 1600 2350
+$Comp
+L Actuator_2020-rescue:+5V-power #PWR0120
+U 1 1 5CB5D6AF
+P 2850 2300
+F 0 "#PWR0120" H 2850 2150 50  0001 C CNN
+F 1 "+5V" H 2865 2469 50  0000 C CNN
+F 2 "" H 2850 2300 50  0001 C CNN
+F 3 "" H 2850 2300 50  0001 C CNN
+	1    2850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R1
+U 1 1 5CB711AA
+P 7550 4550
+F 0 "R1" V 7650 4600 50  0000 L CNN
+F 1 "2K2" V 7650 4400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7480 4550 50  0001 C CNN
+F 3 "~" H 7550 4550 50  0001 C CNN
+	1    7550 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R2
+U 1 1 5CB71846
+P 7150 4550
+F 0 "R2" V 7250 4600 50  0000 L CNN
+F 1 "1K" V 7250 4400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7080 4550 50  0001 C CNN
+F 3 "~" H 7150 4550 50  0001 C CNN
+	1    7150 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0121
+U 1 1 5CB71C61
+P 7750 4550
+F 0 "#PWR0121" H 7750 4400 50  0001 C CNN
+F 1 "+12V" V 7750 4750 50  0000 C CNN
+F 2 "" H 7750 4550 50  0001 C CNN
+F 3 "" H 7750 4550 50  0001 C CNN
+	1    7750 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0122
+U 1 1 5CB72336
+P 6950 4550
+F 0 "#PWR0122" H 6950 4300 50  0001 C CNN
+F 1 "GND" V 6950 4350 50  0000 C CNN
+F 2 "" H 6950 4550 50  0001 C CNN
+F 3 "" H 6950 4550 50  0001 C CNN
+	1    6950 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7750 4550 7700 4550
+Wire Wire Line
+	7000 4550 6950 4550
+Wire Wire Line
+	7400 4550 7350 4550
+Connection ~ 7350 4550
+Wire Wire Line
+	7350 4550 7300 4550
+Text GLabel 7700 4900 0    50   Input ~ 0
+BAT_MEASUREMENT
+$Comp
+L Actuator_2020-rescue:SANYOU_SRD_Form_B-Relay K1
+U 1 1 5CC29016
+P 5150 4000
+F 0 "K1" V 5400 3700 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_B" V 5500 3400 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 6450 3950 50  0001 C CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 5150 4000 50  0001 C CNN
+	1    5150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:BC547-Transistor_BJT Q6
+U 1 1 5CC29EF0
+P 4850 4600
+F 0 "Q6" H 5041 4644 50  0000 L CNN
+F 1 "BC547" H 5041 4557 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5050 4525 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4850 4600 50  0001 L CNN
+	1    4850 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R15
+U 1 1 5CC2B6BD
+P 4450 4600
+F 0 "R15" V 4350 4650 50  0000 C CNN
+F 1 "1K" V 4350 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 4600 50  0001 C CNN
+F 3 "~" H 4450 4600 50  0001 C CNN
+	1    4450 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R13
+U 1 1 5CC2BB1C
+P 4250 4800
+F 0 "R13" V 4150 4900 50  0000 C CNN
+F 1 "10K" V 4150 4750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4180 4800 50  0001 C CNN
+F 3 "~" H 4250 4800 50  0001 C CNN
+	1    4250 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:D-Device D7
+U 1 1 5CC2C10A
+P 4550 4000
+F 0 "D7" V 4506 4079 50  0000 L CNN
+F 1 "D" V 4593 4079 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 4550 4000 50  0001 C CNN
+F 3 "~" H 4550 4000 50  0001 C CNN
+	1    4550 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0138
+U 1 1 5CC2CFF0
+P 4950 3500
+F 0 "#PWR0138" H 4950 3350 50  0001 C CNN
+F 1 "+12V" H 4965 3669 50  0000 C CNN
+F 2 "" H 4950 3500 50  0001 C CNN
+F 3 "" H 4950 3500 50  0001 C CNN
+	1    4950 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3650 4550 3650
+Wire Wire Line
+	4550 3650 4550 3850
+Connection ~ 4950 3650
+Wire Wire Line
+	4950 3650 4950 3700
+Wire Wire Line
+	4550 4150 4550 4350
+Wire Wire Line
+	4550 4350 4950 4350
+Wire Wire Line
+	4950 4350 4950 4300
+Wire Wire Line
+	4950 4350 4950 4400
+Connection ~ 4950 4350
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0139
+U 1 1 5CC58176
+P 4950 5000
+F 0 "#PWR0139" H 4950 4750 50  0001 C CNN
+F 1 "GND" H 4950 4850 50  0000 C CNN
+F 2 "" H 4950 5000 50  0001 C CNN
+F 3 "" H 4950 5000 50  0001 C CNN
+	1    4950 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0140
+U 1 1 5CC58ECB
+P 4250 5000
+F 0 "#PWR0140" H 4250 4750 50  0001 C CNN
+F 1 "GND" H 4250 4850 50  0000 C CNN
+F 2 "" H 4250 5000 50  0001 C CNN
+F 3 "" H 4250 5000 50  0001 C CNN
+	1    4250 5000
+	1    0    0    -1  
+$EndComp
+Text GLabel 4200 4600 0    50   Input ~ 0
+RELAY1
+Wire Wire Line
+	4200 4600 4250 4600
+Wire Wire Line
+	4250 4650 4250 4600
+Connection ~ 4250 4600
+Wire Wire Line
+	4250 4600 4300 4600
+Wire Wire Line
+	4250 4950 4250 5000
+Wire Wire Line
+	4600 4600 4650 4600
+Wire Wire Line
+	4950 4800 4950 5000
+$Comp
+L Actuator_2020-rescue:Screw_Terminal_01x02-Connector J9
+U 1 1 5CC91AEA
+P 5600 3550
+F 0 "J9" H 5550 3650 50  0000 L CNN
+F 1 "RELAY1_CONN" V 5700 3250 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 5600 3550 50  0001 C CNN
+F 3 "~" H 5600 3550 50  0001 C CNN
+	1    5600 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3700 5350 3650
+Wire Wire Line
+	5350 3650 5400 3650
+Wire Wire Line
+	5400 3550 5350 3550
+Wire Wire Line
+	5350 3550 5350 3500
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0141
+U 1 1 5CCA9E90
+P 5350 5000
+F 0 "#PWR0141" H 5350 4750 50  0001 C CNN
+F 1 "GND" H 5350 4850 50  0000 C CNN
+F 2 "" H 5350 5000 50  0001 C CNN
+F 3 "" H 5350 5000 50  0001 C CNN
+	1    5350 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4300 5350 5000
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0142
+U 1 1 5CCB6114
+P 5350 3500
+F 0 "#PWR0142" H 5350 3350 50  0001 C CNN
+F 1 "+12V" H 5365 3669 50  0000 C CNN
+F 2 "" H 5350 3500 50  0001 C CNN
+F 3 "" H 5350 3500 50  0001 C CNN
+	1    5350 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3500 4950 3650
+$Comp
+L Actuator_2020-rescue:SANYOU_SRD_Form_B-Relay K2
+U 1 1 5CCDED83
+P 5150 6050
+F 0 "K2" V 5400 5750 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_B" V 5500 5450 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 6450 6000 50  0001 C CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 5150 6050 50  0001 C CNN
+	1    5150 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:BC547-Transistor_BJT Q7
+U 1 1 5CCDED8D
+P 4850 6650
+F 0 "Q7" H 5041 6694 50  0000 L CNN
+F 1 "BC547" H 5041 6607 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5050 6575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4850 6650 50  0001 L CNN
+	1    4850 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R16
+U 1 1 5CCDED97
+P 4450 6650
+F 0 "R16" V 4350 6700 50  0000 C CNN
+F 1 "1K" V 4350 6550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 6650 50  0001 C CNN
+F 3 "~" H 4450 6650 50  0001 C CNN
+	1    4450 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R14
+U 1 1 5CCDEDA1
+P 4250 6850
+F 0 "R14" V 4150 6950 50  0000 C CNN
+F 1 "10K" V 4150 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4180 6850 50  0001 C CNN
+F 3 "~" H 4250 6850 50  0001 C CNN
+	1    4250 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:D-Device D8
+U 1 1 5CCDEDAB
+P 4550 6050
+F 0 "D8" V 4506 6129 50  0000 L CNN
+F 1 "D" V 4593 6129 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 4550 6050 50  0001 C CNN
+F 3 "~" H 4550 6050 50  0001 C CNN
+	1    4550 6050
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0143
+U 1 1 5CCDEDB5
+P 4950 5550
+F 0 "#PWR0143" H 4950 5400 50  0001 C CNN
+F 1 "+12V" H 4965 5719 50  0000 C CNN
+F 2 "" H 4950 5550 50  0001 C CNN
+F 3 "" H 4950 5550 50  0001 C CNN
+	1    4950 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 5700 4550 5700
+Wire Wire Line
+	4550 5700 4550 5900
+Connection ~ 4950 5700
+Wire Wire Line
+	4950 5700 4950 5750
+Wire Wire Line
+	4550 6200 4550 6400
+Wire Wire Line
+	4550 6400 4950 6400
+Wire Wire Line
+	4950 6400 4950 6350
+Wire Wire Line
+	4950 6400 4950 6450
+Connection ~ 4950 6400
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0144
+U 1 1 5CCDEDC8
+P 4950 7050
+F 0 "#PWR0144" H 4950 6800 50  0001 C CNN
+F 1 "GND" H 4950 6900 50  0000 C CNN
+F 2 "" H 4950 7050 50  0001 C CNN
+F 3 "" H 4950 7050 50  0001 C CNN
+	1    4950 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0145
+U 1 1 5CCDEDD2
+P 4250 7050
+F 0 "#PWR0145" H 4250 6800 50  0001 C CNN
+F 1 "GND" H 4250 6900 50  0000 C CNN
+F 2 "" H 4250 7050 50  0001 C CNN
+F 3 "" H 4250 7050 50  0001 C CNN
+	1    4250 7050
+	1    0    0    -1  
+$EndComp
+Text GLabel 4200 6650 0    50   Input ~ 0
+RELAY2
+Wire Wire Line
+	4200 6650 4250 6650
+Wire Wire Line
+	4250 6700 4250 6650
+Connection ~ 4250 6650
+Wire Wire Line
+	4250 6650 4300 6650
+Wire Wire Line
+	4250 7000 4250 7050
+Wire Wire Line
+	4600 6650 4650 6650
+Wire Wire Line
+	4950 6850 4950 7050
+$Comp
+L Actuator_2020-rescue:Screw_Terminal_01x02-Connector J10
+U 1 1 5CCDEDE4
+P 5600 5600
+F 0 "J10" H 5500 5700 50  0000 L CNN
+F 1 "RELAY2_CONN" V 5700 5350 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 5600 5600 50  0001 C CNN
+F 3 "~" H 5600 5600 50  0001 C CNN
+	1    5600 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 5750 5350 5700
+Wire Wire Line
+	5350 5700 5400 5700
+Wire Wire Line
+	5400 5600 5350 5600
+Wire Wire Line
+	5350 5600 5350 5550
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0146
+U 1 1 5CCDEDF2
+P 5350 7050
+F 0 "#PWR0146" H 5350 6800 50  0001 C CNN
+F 1 "GND" H 5350 6900 50  0000 C CNN
+F 2 "" H 5350 7050 50  0001 C CNN
+F 3 "" H 5350 7050 50  0001 C CNN
+	1    5350 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 6350 5350 7050
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0147
+U 1 1 5CCDEDFD
+P 5350 5550
+F 0 "#PWR0147" H 5350 5400 50  0001 C CNN
+F 1 "+12V" H 5365 5719 50  0000 C CNN
+F 2 "" H 5350 5550 50  0001 C CNN
+F 3 "" H 5350 5550 50  0001 C CNN
+	1    5350 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 5550 4950 5700
+$Comp
+L Actuator_2020-rescue:Conn_01x04-Connector_Generic J8
+U 1 1 5CC457B7
+P 800 1100
+F 0 "J8" H 800 1300 50  0000 C CNN
+F 1 "SERIAL_CONNECTOR" H 600 800 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B04B-EH-A_1x04_P2.50mm_Vertical" H 800 1100 50  0001 C CNN
+F 3 "~" H 800 1100 50  0001 C CNN
+	1    800  1100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1000 900  1350 900 
+Connection ~ 1350 900 
+Wire Wire Line
+	1000 1000 1350 1000
+Connection ~ 1350 1000
+Wire Wire Line
+	1000 1100 1350 1100
+Connection ~ 1350 1100
+Wire Wire Line
+	1000 1200 1350 1200
+Connection ~ 1350 1200
+$Comp
+L Actuator_2020-rescue:Conn_01x04-Connector_Generic J13
+U 1 1 5CC8F207
+P 2050 1100
+F 0 "J13" H 2050 1300 50  0000 C CNN
+F 1 "I2C_CONNECTOR" H 1850 800 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B04B-EH-A_1x04_P2.50mm_Vertical" H 2050 1100 50  0001 C CNN
+F 3 "~" H 2050 1100 50  0001 C CNN
+	1    2050 1100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2250 900  2600 900 
+Connection ~ 2600 900 
+Wire Wire Line
+	2250 1000 2600 1000
+Connection ~ 2600 1000
+Wire Wire Line
+	2250 1100 2600 1100
+Connection ~ 2600 1100
+Wire Wire Line
+	2250 1200 2600 1200
+Connection ~ 2600 1200
+$Comp
+L Actuator_2020-rescue:VP0610T-Transistor_FET Q5
+U 1 1 5CCFE9B9
+P 1250 2450
+F 0 "Q5" V 1587 2450 50  0000 C CNN
+F 1 "AP2305GN-HF-3" V 1500 2500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1450 2375 50  0001 L CIN
+F 3 "https://www.tme.eu/Document/26bedb68372be83c2861fdd841ae88e6/AP2305GN-3.pdf" H 1250 2450 50  0001 L CNN
+	1    1250 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	950  2450 1000 2450
+Wire Wire Line
+	1250 2650 1250 2750
+Wire Wire Line
+	1250 2750 1600 2750
+Wire Wire Line
+	950  2550 1000 2550
+Wire Wire Line
+	1000 2550 1000 2750
+Wire Wire Line
+	1000 2750 1250 2750
+Connection ~ 1250 2750
+Wire Wire Line
+	1000 2450 1000 2350
+Wire Wire Line
+	1000 2350 1050 2350
+Wire Wire Line
+	1450 2350 1600 2350
+Text Notes 650  2900 0    50   ~ 0
+11V-15V
+Wire Wire Line
+	7350 4800 7750 4800
+Wire Wire Line
+	7750 4800 7750 4900
+Wire Wire Line
+	7750 4900 7700 4900
+Wire Wire Line
+	7350 4550 7350 4800
+Wire Wire Line
+	3850 2450 3900 2450
+$Comp
+L Actuator_2020-rescue:BS170-Transistor_FET Q2
+U 1 1 5CB848A4
+P 1650 6300
+F 0 "Q2" H 1856 6344 50  0000 L CNN
+F 1 "BS170" H 1856 6257 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1850 6225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BS/BS170.pdf" H 1650 6300 50  0001 L CNN
+	1    1650 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R6
+U 1 1 5CB85EB9
+P 1250 6300
+F 0 "R6" V 1150 6350 50  0000 C CNN
+F 1 "1K" V 1150 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1180 6300 50  0001 C CNN
+F 3 "~" H 1250 6300 50  0001 C CNN
+	1    1250 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R4
+U 1 1 5CB8656E
+P 1050 6500
+F 0 "R4" V 950 6600 50  0000 C CNN
+F 1 "10K" V 950 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 980 6500 50  0001 C CNN
+F 3 "~" H 1050 6500 50  0001 C CNN
+	1    1050 6500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1100 6300 1050 6300
+Wire Wire Line
+	1050 6350 1050 6300
+Connection ~ 1050 6300
+Wire Wire Line
+	1050 6300 1000 6300
+Wire Wire Line
+	1400 6300 1450 6300
+Wire Wire Line
+	1750 6500 1750 6700
+Wire Wire Line
+	1050 6650 1050 6700
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0123
+U 1 1 5CB965D4
+P 1050 6700
+F 0 "#PWR0123" H 1050 6450 50  0001 C CNN
+F 1 "GND" H 1050 6550 50  0000 C CNN
+F 2 "" H 1050 6700 50  0001 C CNN
+F 3 "" H 1050 6700 50  0001 C CNN
+	1    1050 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0124
+U 1 1 5CB96BE5
+P 1750 6700
+F 0 "#PWR0124" H 1750 6450 50  0001 C CNN
+F 1 "GND" H 1750 6550 50  0000 C CNN
+F 2 "" H 1750 6700 50  0001 C CNN
+F 3 "" H 1750 6700 50  0001 C CNN
+	1    1750 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:Conn_01x02-Connector_Generic J4
+U 1 1 5CB9EE0F
+P 1450 5900
+F 0 "J4" V 1450 6050 50  0000 C CNN
+F 1 "MOSFET3_CONN" V 1550 5800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 5900 50  0001 C CNN
+F 3 "~" H 1450 5900 50  0001 C CNN
+	1    1450 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:D-Device D3
+U 1 1 5CB9FDAC
+P 1900 5850
+F 0 "D3" V 1856 5929 50  0000 L CNN
+F 1 "D" V 1943 5929 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 1900 5850 50  0001 C CNN
+F 3 "~" H 1900 5850 50  0001 C CNN
+	1    1900 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1750 6100 1750 6050
+Wire Wire Line
+	1900 6050 1900 6000
+Wire Wire Line
+	1750 6050 1900 6050
+Wire Wire Line
+	1650 5900 1700 5900
+Wire Wire Line
+	1700 5900 1700 6050
+Wire Wire Line
+	1700 6050 1750 6050
+Connection ~ 1750 6050
+Wire Wire Line
+	1650 5800 1700 5800
+Wire Wire Line
+	1700 5800 1700 5650
+Wire Wire Line
+	1700 5650 1800 5650
+Wire Wire Line
+	1900 5700 1900 5650
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0125
+U 1 1 5CBAFC88
+P 1800 5600
+F 0 "#PWR0125" H 1800 5450 50  0001 C CNN
+F 1 "+12V" H 1815 5769 50  0000 C CNN
+F 2 "" H 1800 5600 50  0001 C CNN
+F 3 "" H 1800 5600 50  0001 C CNN
+	1    1800 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 5600 1800 5650
+Connection ~ 1800 5650
+Wire Wire Line
+	1800 5650 1900 5650
+Text GLabel 1000 6300 0    50   Input ~ 0
+MOSFET3
+$Comp
+L Actuator_2020-rescue:BS170-Transistor_FET Q4
+U 1 1 5CBBCF37
+P 3250 6300
+F 0 "Q4" H 3456 6344 50  0000 L CNN
+F 1 "BS170" H 3456 6257 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3450 6225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BS/BS170.pdf" H 3250 6300 50  0001 L CNN
+	1    3250 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R11
+U 1 1 5CBBCF41
+P 2850 6300
+F 0 "R11" V 2750 6350 50  0000 C CNN
+F 1 "1K" V 2750 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2780 6300 50  0001 C CNN
+F 3 "~" H 2850 6300 50  0001 C CNN
+	1    2850 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R8
+U 1 1 5CBBCF4B
+P 2650 6500
+F 0 "R8" V 2550 6600 50  0000 C CNN
+F 1 "10K" V 2550 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2580 6500 50  0001 C CNN
+F 3 "~" H 2650 6500 50  0001 C CNN
+	1    2650 6500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 6300 2650 6300
+Wire Wire Line
+	2650 6350 2650 6300
+Connection ~ 2650 6300
+Wire Wire Line
+	2650 6300 2600 6300
+Wire Wire Line
+	3000 6300 3050 6300
+Wire Wire Line
+	3350 6500 3350 6700
+Wire Wire Line
+	2650 6650 2650 6700
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0126
+U 1 1 5CBBCF5C
+P 2650 6700
+F 0 "#PWR0126" H 2650 6450 50  0001 C CNN
+F 1 "GND" H 2650 6550 50  0000 C CNN
+F 2 "" H 2650 6700 50  0001 C CNN
+F 3 "" H 2650 6700 50  0001 C CNN
+	1    2650 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0127
+U 1 1 5CBBCF66
+P 3350 6700
+F 0 "#PWR0127" H 3350 6450 50  0001 C CNN
+F 1 "GND" H 3350 6550 50  0000 C CNN
+F 2 "" H 3350 6700 50  0001 C CNN
+F 3 "" H 3350 6700 50  0001 C CNN
+	1    3350 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:Conn_01x02-Connector_Generic J7
+U 1 1 5CBBCF70
+P 3050 5900
+F 0 "J7" V 3050 6050 50  0000 C CNN
+F 1 "MOSFET4_CONN" V 3150 5800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3050 5900 50  0001 C CNN
+F 3 "~" H 3050 5900 50  0001 C CNN
+	1    3050 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:D-Device D5
+U 1 1 5CBBCF7A
+P 3500 5850
+F 0 "D5" V 3456 5929 50  0000 L CNN
+F 1 "D" V 3543 5929 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 3500 5850 50  0001 C CNN
+F 3 "~" H 3500 5850 50  0001 C CNN
+	1    3500 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 6100 3350 6050
+Wire Wire Line
+	3500 6050 3500 6000
+Wire Wire Line
+	3350 6050 3500 6050
+Wire Wire Line
+	3250 5900 3300 5900
+Wire Wire Line
+	3300 5900 3300 6050
+Wire Wire Line
+	3300 6050 3350 6050
+Connection ~ 3350 6050
+Wire Wire Line
+	3250 5800 3300 5800
+Wire Wire Line
+	3300 5800 3300 5650
+Wire Wire Line
+	3300 5650 3400 5650
+Wire Wire Line
+	3500 5700 3500 5650
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0128
+U 1 1 5CBBCF8F
+P 3400 5600
+F 0 "#PWR0128" H 3400 5450 50  0001 C CNN
+F 1 "+12V" H 3415 5769 50  0000 C CNN
+F 2 "" H 3400 5600 50  0001 C CNN
+F 3 "" H 3400 5600 50  0001 C CNN
+	1    3400 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 5600 3400 5650
+Connection ~ 3400 5650
+Wire Wire Line
+	3400 5650 3500 5650
+Text GLabel 2600 6300 0    50   Input ~ 0
+MOSFET4
+$Comp
+L Actuator_2020-rescue:BS170-Transistor_FET Q1
+U 1 1 5CBC524E
+P 1650 4700
+F 0 "Q1" H 1856 4744 50  0000 L CNN
+F 1 "BS170" H 1856 4657 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1850 4625 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BS/BS170.pdf" H 1650 4700 50  0001 L CNN
+	1    1650 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R5
+U 1 1 5CBC5258
+P 1250 4700
+F 0 "R5" V 1150 4750 50  0000 C CNN
+F 1 "1K" V 1150 4600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1180 4700 50  0001 C CNN
+F 3 "~" H 1250 4700 50  0001 C CNN
+	1    1250 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R3
+U 1 1 5CBC5262
+P 1050 4900
+F 0 "R3" V 950 5000 50  0000 C CNN
+F 1 "10K" V 950 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 980 4900 50  0001 C CNN
+F 3 "~" H 1050 4900 50  0001 C CNN
+	1    1050 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1100 4700 1050 4700
+Wire Wire Line
+	1050 4750 1050 4700
+Connection ~ 1050 4700
+Wire Wire Line
+	1050 4700 1000 4700
+Wire Wire Line
+	1400 4700 1450 4700
+Wire Wire Line
+	1750 4900 1750 5100
+Wire Wire Line
+	1050 5050 1050 5100
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0129
+U 1 1 5CBC5273
+P 1050 5100
+F 0 "#PWR0129" H 1050 4850 50  0001 C CNN
+F 1 "GND" H 1050 4950 50  0000 C CNN
+F 2 "" H 1050 5100 50  0001 C CNN
+F 3 "" H 1050 5100 50  0001 C CNN
+	1    1050 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0130
+U 1 1 5CBC527D
+P 1750 5100
+F 0 "#PWR0130" H 1750 4850 50  0001 C CNN
+F 1 "GND" H 1750 4950 50  0000 C CNN
+F 2 "" H 1750 5100 50  0001 C CNN
+F 3 "" H 1750 5100 50  0001 C CNN
+	1    1750 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:Conn_01x02-Connector_Generic J3
+U 1 1 5CBC5287
+P 1450 4300
+F 0 "J3" V 1450 4450 50  0000 C CNN
+F 1 "MOSFET1_CONN" V 1550 4200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 4300 50  0001 C CNN
+F 3 "~" H 1450 4300 50  0001 C CNN
+	1    1450 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:D-Device D2
+U 1 1 5CBC5291
+P 1900 4250
+F 0 "D2" V 1856 4329 50  0000 L CNN
+F 1 "D" V 1943 4329 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 1900 4250 50  0001 C CNN
+F 3 "~" H 1900 4250 50  0001 C CNN
+	1    1900 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1750 4500 1750 4450
+Wire Wire Line
+	1900 4450 1900 4400
+Wire Wire Line
+	1750 4450 1900 4450
+Wire Wire Line
+	1650 4300 1700 4300
+Wire Wire Line
+	1700 4300 1700 4450
+Wire Wire Line
+	1700 4450 1750 4450
+Connection ~ 1750 4450
+Wire Wire Line
+	1650 4200 1700 4200
+Wire Wire Line
+	1700 4200 1700 4050
+Wire Wire Line
+	1700 4050 1800 4050
+Wire Wire Line
+	1900 4100 1900 4050
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0131
+U 1 1 5CBC52A6
+P 1800 4000
+F 0 "#PWR0131" H 1800 3850 50  0001 C CNN
+F 1 "+12V" H 1815 4169 50  0000 C CNN
+F 2 "" H 1800 4000 50  0001 C CNN
+F 3 "" H 1800 4000 50  0001 C CNN
+	1    1800 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4000 1800 4050
+Connection ~ 1800 4050
+Wire Wire Line
+	1800 4050 1900 4050
+Text GLabel 1000 4700 0    50   Input ~ 0
+MOSFET1
+$Comp
+L Actuator_2020-rescue:BS170-Transistor_FET Q3
+U 1 1 5CBC52B4
+P 3250 4700
+F 0 "Q3" H 3456 4744 50  0000 L CNN
+F 1 "BS170" H 3456 4657 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3450 4625 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BS/BS170.pdf" H 3250 4700 50  0001 L CNN
+	1    3250 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R10
+U 1 1 5CBC52BE
+P 2850 4700
+F 0 "R10" V 2750 4750 50  0000 C CNN
+F 1 "1K" V 2750 4600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2780 4700 50  0001 C CNN
+F 3 "~" H 2850 4700 50  0001 C CNN
+	1    2850 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:R-Device R7
+U 1 1 5CBC52C8
+P 2650 4900
+F 0 "R7" V 2550 5000 50  0000 C CNN
+F 1 "10K" V 2550 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2580 4900 50  0001 C CNN
+F 3 "~" H 2650 4900 50  0001 C CNN
+	1    2650 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 4700 2650 4700
+Wire Wire Line
+	2650 4750 2650 4700
+Connection ~ 2650 4700
+Wire Wire Line
+	2650 4700 2600 4700
+Wire Wire Line
+	3000 4700 3050 4700
+Wire Wire Line
+	3350 4900 3350 5100
+Wire Wire Line
+	2650 5050 2650 5100
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0132
+U 1 1 5CBC52D9
+P 2650 5100
+F 0 "#PWR0132" H 2650 4850 50  0001 C CNN
+F 1 "GND" H 2650 4950 50  0000 C CNN
+F 2 "" H 2650 5100 50  0001 C CNN
+F 3 "" H 2650 5100 50  0001 C CNN
+	1    2650 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0133
+U 1 1 5CBC52E3
+P 3350 5100
+F 0 "#PWR0133" H 3350 4850 50  0001 C CNN
+F 1 "GND" H 3350 4950 50  0000 C CNN
+F 2 "" H 3350 5100 50  0001 C CNN
+F 3 "" H 3350 5100 50  0001 C CNN
+	1    3350 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:Conn_01x02-Connector_Generic J6
+U 1 1 5CBC52ED
+P 3050 4300
+F 0 "J6" V 3050 4450 50  0000 C CNN
+F 1 "MOSFET2_CONN" V 3150 4200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3050 4300 50  0001 C CNN
+F 3 "~" H 3050 4300 50  0001 C CNN
+	1    3050 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Actuator_2020-rescue:D-Device D4
+U 1 1 5CBC52F7
+P 3500 4250
+F 0 "D4" V 3456 4329 50  0000 L CNN
+F 1 "D" V 3543 4329 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 3500 4250 50  0001 C CNN
+F 3 "~" H 3500 4250 50  0001 C CNN
+	1    3500 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 4500 3350 4450
+Wire Wire Line
+	3500 4450 3500 4400
+Wire Wire Line
+	3350 4450 3500 4450
+Wire Wire Line
+	3250 4300 3300 4300
+Wire Wire Line
+	3300 4300 3300 4450
+Wire Wire Line
+	3300 4450 3350 4450
+Connection ~ 3350 4450
+Wire Wire Line
+	3250 4200 3300 4200
+Wire Wire Line
+	3300 4200 3300 4050
+Wire Wire Line
+	3300 4050 3400 4050
+Wire Wire Line
+	3500 4100 3500 4050
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0134
+U 1 1 5CBC530C
+P 3400 4000
+F 0 "#PWR0134" H 3400 3850 50  0001 C CNN
+F 1 "+12V" H 3415 4169 50  0000 C CNN
+F 2 "" H 3400 4000 50  0001 C CNN
+F 3 "" H 3400 4000 50  0001 C CNN
+	1    3400 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4000 3400 4050
+Connection ~ 3400 4050
+Wire Wire Line
+	3400 4050 3500 4050
+Text GLabel 2600 4700 0    50   Input ~ 0
+MOSFET2
+$Comp
+L Actuator_2020-rescue:TLE5206-2G-TLE5206-2G U2
+U 1 1 5CC0B60D
+P 7000 1650
+F 0 "U2" H 7000 2209 50  0000 C CNN
+F 1 "TLE5206-2G" H 7000 2122 50  0000 C CNN
+F 2 "TLE5206-2G:DPAK127P1500X440-8N" H 7000 1650 50  0001 L BNN
+F 3 "" H 7000 1650 50  0001 L BNN
+F 4 "None" H 7000 1650 50  0001 L BNN "Field4"
+F 5 "Infineon" H 7000 1650 50  0001 L BNN "Field5"
+F 6 "Unavailable" H 7000 1650 50  0001 L BNN "Field6"
+F 7 "TO-263 Infineon" H 7000 1650 50  0001 L BNN "Field7"
+F 8 "Ic h-Bridge 5a Dc Motor D2pak-7 - Tle5206-2g" H 7000 1650 50  0001 L BNN "Field8"
+	1    7000 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:CP-Device C8
+U 1 1 5CC2EB0D
+P 8000 1100
+F 0 "C8" V 8050 1150 50  0000 L CNN
+F 1 "100uF/16V" V 7850 850 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.4" H 8038 950 50  0001 C CNN
+F 3 "~" H 8000 1100 50  0001 C CNN
+	1    8000 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:C-Device C6
+U 1 1 5CC2FF4E
+P 7700 1100
+F 0 "C6" V 7650 1150 50  0000 L CNN
+F 1 "100nF/16V" V 7550 900 43  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7738 950 50  0001 C CNN
+F 3 "~" H 7700 1100 50  0001 C CNN
+	1    7700 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 1350 7450 1350
+Wire Wire Line
+	7450 1350 7450 900 
+Wire Wire Line
+	7450 900  7700 900 
+Wire Wire Line
+	8000 900  8000 950 
+Wire Wire Line
+	7700 900  7700 950 
+Connection ~ 7700 900 
+Wire Wire Line
+	7700 900  8000 900 
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0135
+U 1 1 5CC50A3D
+P 7450 1950
+F 0 "#PWR0135" H 7450 1700 50  0001 C CNN
+F 1 "GND" V 7450 1750 50  0000 C CNN
+F 2 "" H 7450 1950 50  0001 C CNN
+F 3 "" H 7450 1950 50  0001 C CNN
+	1    7450 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7400 1950 7450 1950
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0136
+U 1 1 5CC610E1
+P 7700 1300
+F 0 "#PWR0136" H 7700 1050 50  0001 C CNN
+F 1 "GND" H 7700 1150 50  0000 C CNN
+F 2 "" H 7700 1300 50  0001 C CNN
+F 3 "" H 7700 1300 50  0001 C CNN
+	1    7700 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0137
+U 1 1 5CC6149C
+P 8000 1300
+F 0 "#PWR0137" H 8000 1050 50  0001 C CNN
+F 1 "GND" H 8000 1150 50  0000 C CNN
+F 2 "" H 8000 1300 50  0001 C CNN
+F 3 "" H 8000 1300 50  0001 C CNN
+	1    8000 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1250 7700 1300
+Wire Wire Line
+	8000 1250 8000 1300
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0148
+U 1 1 5CC8182E
+P 8000 850
+F 0 "#PWR0148" H 8000 700 50  0001 C CNN
+F 1 "+12V" H 8015 1019 50  0000 C CNN
+F 2 "" H 8000 850 50  0001 C CNN
+F 3 "" H 8000 850 50  0001 C CNN
+	1    8000 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 850  8000 900 
+Connection ~ 8000 900 
+Text GLabel 6550 1550 0    50   Input ~ 0
+DC1_1
+Text GLabel 6550 1650 0    50   Input ~ 0
+DC1_2
+Wire Wire Line
+	6550 1550 6600 1550
+Wire Wire Line
+	6550 1650 6600 1650
+Text GLabel 7450 1550 2    50   Input ~ 0
+DCOUT1_1
+Text GLabel 7450 1650 2    50   Input ~ 0
+DCOUT1_2
+Wire Wire Line
+	7400 1550 7450 1550
+Wire Wire Line
+	7400 1650 7450 1650
+Text GLabel 7450 1750 2    50   Input ~ 0
+DCEF_1
+Wire Wire Line
+	7400 1750 7450 1750
+Text GLabel 6550 950  0    50   Input ~ 0
+DCEF_1
+$Comp
+L Actuator_2020-rescue:R-Device R9
+U 1 1 5CD17770
+P 6750 950
+F 0 "R9" V 6650 1050 50  0000 C CNN
+F 1 "10K" V 6650 900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6680 950 50  0001 C CNN
+F 3 "~" H 6750 950 50  0001 C CNN
+	1    6750 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:+5V-power #PWR0149
+U 1 1 5CD17D22
+P 6950 950
+F 0 "#PWR0149" H 6950 800 50  0001 C CNN
+F 1 "+5V" V 6950 1150 50  0000 C CNN
+F 2 "" H 6950 950 50  0001 C CNN
+F 3 "" H 6950 950 50  0001 C CNN
+	1    6950 950 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6900 950  6950 950 
+Wire Wire Line
+	6550 950  6600 950 
+$Comp
+L Actuator_2020-rescue:Screw_Terminal_01x02-Connector J14
+U 1 1 5CD8892B
+P 8450 1750
+F 0 "J14" V 8450 1850 50  0000 L CNN
+F 1 "DCMOTOR_1" V 8600 1500 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 8450 1750 50  0001 C CNN
+F 3 "~" H 8450 1750 50  0001 C CNN
+	1    8450 1750
+	0    1    1    0   
+$EndComp
+Text GLabel 8350 1500 1    50   Input ~ 0
+DCOUT1_1
+Text GLabel 8450 1500 1    50   Input ~ 0
+DCOUT1_2
+Wire Wire Line
+	8350 1500 8350 1550
+Wire Wire Line
+	8450 1500 8450 1550
+$Comp
+L Actuator_2020-rescue:TLE5206-2G-TLE5206-2G U3
+U 1 1 5CDAC8A0
+P 7000 3200
+F 0 "U3" H 7000 3759 50  0000 C CNN
+F 1 "TLE5206-2G" H 7000 3672 50  0000 C CNN
+F 2 "TLE5206-2G:DPAK127P1500X440-8N" H 7000 3200 50  0001 L BNN
+F 3 "" H 7000 3200 50  0001 L BNN
+F 4 "None" H 7000 3200 50  0001 L BNN "Field4"
+F 5 "Infineon" H 7000 3200 50  0001 L BNN "Field5"
+F 6 "Unavailable" H 7000 3200 50  0001 L BNN "Field6"
+F 7 "TO-263 Infineon" H 7000 3200 50  0001 L BNN "Field7"
+F 8 "Ic h-Bridge 5a Dc Motor D2pak-7 - Tle5206-2g" H 7000 3200 50  0001 L BNN "Field8"
+	1    7000 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:CP-Device C9
+U 1 1 5CDAC8AA
+P 8000 2650
+F 0 "C9" V 8050 2700 50  0000 L CNN
+F 1 "100uF/16V" V 7850 2400 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.4" H 8038 2500 50  0001 C CNN
+F 3 "~" H 8000 2650 50  0001 C CNN
+	1    8000 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:C-Device C7
+U 1 1 5CDAC8B4
+P 7700 2650
+F 0 "C7" V 7650 2700 50  0000 L CNN
+F 1 "100nF/16V" V 7550 2450 43  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7738 2500 50  0001 C CNN
+F 3 "~" H 7700 2650 50  0001 C CNN
+	1    7700 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2900 7450 2900
+Wire Wire Line
+	7450 2900 7450 2450
+Wire Wire Line
+	7450 2450 7700 2450
+Wire Wire Line
+	8000 2450 8000 2500
+Wire Wire Line
+	7700 2450 7700 2500
+Connection ~ 7700 2450
+Wire Wire Line
+	7700 2450 8000 2450
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0150
+U 1 1 5CDAC8C5
+P 7450 3500
+F 0 "#PWR0150" H 7450 3250 50  0001 C CNN
+F 1 "GND" V 7450 3300 50  0000 C CNN
+F 2 "" H 7450 3500 50  0001 C CNN
+F 3 "" H 7450 3500 50  0001 C CNN
+	1    7450 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7400 3500 7450 3500
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0151
+U 1 1 5CDAC8D0
+P 7700 2850
+F 0 "#PWR0151" H 7700 2600 50  0001 C CNN
+F 1 "GND" H 7700 2700 50  0000 C CNN
+F 2 "" H 7700 2850 50  0001 C CNN
+F 3 "" H 7700 2850 50  0001 C CNN
+	1    7700 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Actuator_2020-rescue:GND-power #PWR0152
+U 1 1 5CDAC8DA
+P 8000 2850
+F 0 "#PWR0152" H 8000 2600 50  0001 C CNN
+F 1 "GND" H 8000 2700 50  0000 C CNN
+F 2 "" H 8000 2850 50  0001 C CNN
+F 3 "" H 8000 2850 50  0001 C CNN
+	1    8000 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 2800 7700 2850
+Wire Wire Line
+	8000 2800 8000 2850
+$Comp
+L Actuator_2020-rescue:+12V-power #PWR0153
+U 1 1 5CDAC8E6
+P 8000 2400
+F 0 "#PWR0153" H 8000 2250 50  0001 C CNN
+F 1 "+12V" H 8015 2569 50  0000 C CNN
+F 2 "" H 8000 2400 50  0001 C CNN
+F 3 "" H 8000 2400 50  0001 C CNN
+	1    8000 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2400 8000 2450
+Connection ~ 8000 2450
+Text GLabel 6550 3100 0    50   Input ~ 0
+DC2_1
+Text GLabel 6550 3200 0    50   Input ~ 0
+DC2_2
+Wire Wire Line
+	6550 3100 6600 3100
+Wire Wire Line
+	6550 3200 6600 3200
+Text GLabel 7450 3100 2    50   Input ~ 0
+DCOUT2_1
+Text GLabel 7450 3200 2    50   Input ~ 0
+DCOUT2_2
+Wire Wire Line
+	7400 3100 7450 3100
+Wire Wire Line
+	7400 3200 7450 3200
+Text GLabel 7450 3300 2    50   Input ~ 0
+DCEF_2
+Wire Wire Line
+	7400 3300 7450 3300
+Text GLabel 6550 2500 0    50   Input ~ 0
+DCEF_2
+$Comp
+L Actuator_2020-rescue:R-Device R12
+U 1 1 5CDAC8FD
+P 6750 2500
+F 0 "R12" V 6650 2600 50  0000 C CNN
+F 1 "10K" V 6650 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6680 2500 50  0001 C CNN
+F 3 "~" H 6750 2500 50  0001 C CNN
+	1    6750 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L Actuator_2020-rescue:+5V-power #PWR0154
+U 1 1 5CDAC907
+P 6950 2500
+F 0 "#PWR0154" H 6950 2350 50  0001 C CNN
+F 1 "+5V" V 6950 2700 50  0000 C CNN
+F 2 "" H 6950 2500 50  0001 C CNN
+F 3 "" H 6950 2500 50  0001 C CNN
+	1    6950 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6900 2500 6950 2500
+Wire Wire Line
+	6550 2500 6600 2500
+$Comp
+L Actuator_2020-rescue:Screw_Terminal_01x02-Connector J15
+U 1 1 5CDAC913
+P 8450 3300
+F 0 "J15" V 8450 3400 50  0000 L CNN
+F 1 "DCMOTOR_2" V 8600 3050 50  0000 L CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 8450 3300 50  0001 C CNN
+F 3 "~" H 8450 3300 50  0001 C CNN
+	1    8450 3300
+	0    1    1    0   
+$EndComp
+Text GLabel 8350 3050 1    50   Input ~ 0
+DCOUT2_1
+Text GLabel 8450 3050 1    50   Input ~ 0
+DCOUT2_2
+Wire Wire Line
+	8350 3050 8350 3100
+Wire Wire Line
+	8450 3050 8450 3100
+Text GLabel 4950 2050 2    50   Input ~ 0
+DCEF_2
+Text GLabel 4950 1950 2    50   Input ~ 0
+DCEF_1
+Wire Notes Line
+	3050 500  3050 3450
+Wire Notes Line
+	4750 3450 4750 3250
+Wire Notes Line
+	4750 3250 5950 3250
+Wire Notes Line
+	450  3450 4750 3450
+Wire Notes Line
+	5950 500  5950 7750
+Wire Notes Line
+	3750 3450 3750 7800
+Wire Notes Line
+	5950 4350 8700 4350
+Wire Notes Line
+	8700 500  8700 5550
+Wire Notes Line
+	5950 5550 11200 5550
+Wire Notes Line
+	500  1900 3050 1900
+Text Notes 550  1800 0    118  ~ 0
+Serial and I2C connectors
+Text Notes 500  3300 0    118  ~ 0
+12V and 5V 
+Text Notes 3100 3350 0    118  ~ 0
+Arduino Nano\n
+Text Notes 6050 4250 0    118  ~ 0
+DC Motor drivers
+Text Notes 6000 5450 0    118  ~ 0
+Battery Measurement
+Text Notes 8750 5450 0    118  ~ 0
+Stepper motor drivers\n
+Text Notes 3850 7700 0    118  ~ 0
+Relays with drivers
+Text Notes 600  7650 0    118  ~ 0
+MOSFETS for pneumatics
+$EndSCHEMATC
